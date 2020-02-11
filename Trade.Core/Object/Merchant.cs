@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Trade.Object
+namespace Trade.Core.Object
 {
     public class Merchant
     {
