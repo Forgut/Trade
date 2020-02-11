@@ -11,96 +11,121 @@ namespace Trade.Core
     public static class GameInfo
     {
         #region Countries
-        public static Country Poland => new Country()
+        public static IEnumerable<Country> Countries = new List<Country>()
         {
-            Name = "Poland"
+            Poland,
+            TeutonicOrder,
+            Denmark,
+            Sweden
         };
-        public static Country TeutonicOrder => new Country()
+        public static Country Poland = new Country()
+        {
+            Name = "Poland",
+        };
+        public static Country TeutonicOrder = new Country()
         {
             Name = "Teutonic Order"
         };
-        public static Country Denmark => new Country()
+        public static Country Denmark = new Country()
         {
             Name = "Denmark"
         };
-        public static Country Sweden => new Country()
+        public static Country Sweden = new Country()
         {
             Name = "Sweden"
         };
         #endregion
 
         #region TradeNodes
-        public static TradeNode Lubeck => new TradeNode()
+        public static IEnumerable<TradeNode> TradeNodes = new List<TradeNode>()
+        {
+            Lubeck,
+            Krakow,
+            BalticSea,
+            Novgorod
+        };  
+        public static TradeNode Lubeck = new TradeNode()
         {
             Incoming = new List<TradeNode>() { BalticSea, Krakow }
         };
-        public static TradeNode Krakow => new TradeNode()
+        public static TradeNode Krakow = new TradeNode()
         {
             Incoming = new List<TradeNode>() { BalticSea, Novgorod },
             Outgoing = new List<TradeNode>() { Lubeck }
         };
-        public static TradeNode BalticSea => new TradeNode()
+        public static TradeNode BalticSea = new TradeNode()
         {
             Incoming = new List<TradeNode>() { Novgorod },
             Outgoing = new List<TradeNode>() { Krakow, Lubeck }
         };
-        public static TradeNode Novgorod => new TradeNode()
+        public static TradeNode Novgorod = new TradeNode()
         {
             Outgoing = new List<TradeNode>() { BalticSea, Krakow }
         };
         #endregion
 
         #region Provinces
-        public static Province Poznan => new Province()
+        public static IEnumerable<Province> Provinces = new List<Province>()
+        {
+            Gdansk,
+            Meckelburg,
+            Neva,
+            Poznan,
+            Riga,
+            Sjaelland,
+            Stockholm,
+            Warsaw,
+        };
+        public static Province Poznan = new Province()
         {
             Owner = Poland,
             TradeNode = Krakow,
             TradePower = 1.0m,
             TradeValue = 1.0m
         };
-        public static Province Warsaw => new Province()
+        public static Province Warsaw = new Province()
         {
             Owner = Poland,
             TradeNode = Krakow,
             TradePower = 1.0m,
             TradeValue = 1.0m
         };
-        public static Province Gdansk => new Province()
+        public static Province Gdansk = new Province()
         {
             Owner = TeutonicOrder,
             TradeNode = BalticSea,
             TradePower = 1.0m,
             TradeValue = 1.0m
         };
-        public static Province Riga => new Province()
+        public static Province Riga = new Province()
         {
             Owner = TeutonicOrder,
             TradeNode = BalticSea,
             TradePower = 1.0m,
             TradeValue = 1.0m
         };
-        public static Province Meckelburg => new Province()
+        public static Province Meckelburg = new Province()
         {
             Owner = Denmark,
             TradeNode = Lubeck,
             TradePower = 1.0m,
             TradeValue = 1.0m
         };
-        public static Province Sjaelland => new Province()
+        public static Province Sjaelland = new Province()
         {
             Owner = Denmark,
             TradeNode = Lubeck,
             TradePower = 1.0m,
             TradeValue = 1.0m
         };
-        public static Province Stockholm => new Province()
+        public static Province Stockholm = new Province()
         {
             Owner = Sweden,
             TradeNode = BalticSea,
             TradePower = 1.0m,
             TradeValue = 1.0m
         };
-        public static Province Neva => new Province()
+        public static Province Neva = new Province()
         {
             Owner = Sweden,
             TradeNode = Novgorod,
