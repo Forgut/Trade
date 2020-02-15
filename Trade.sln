@@ -3,9 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.960
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trade.Test", "Trade\Trade.Test.csproj", "{24B090BE-358C-4F72-B297-944B34B80CBF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trade.Test", "Trade\Trade.Test.csproj", "{24B090BE-358C-4F72-B297-944B34B80CBF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Trade.Core", "Trade.Core\Trade.Core.csproj", "{E3BC7DC4-4BF4-49D7-971E-BA5466EC1E8B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Trade.Core", "Trade.Core\Trade.Core.csproj", "{E3BC7DC4-4BF4-49D7-971E-BA5466EC1E8B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{4BF20096-79C0-46EC-8CB5-2F46F5910F61}"
+	ProjectSection(SolutionItems) = preProject
+		ReadMe.txt = ReadMe.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
